@@ -1,0 +1,32 @@
+{
+  "name": "gatsby-remark-acronyms",
+  "version": "0.0.1",
+  "description": "Gatsby Remark plugin to show tootips for acronyms found in text",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "format": "eslint --fix src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroLamas/gatsby-remark-acronyms.git"
+  },
+  "keywords": [],
+  "author": "Pedro Lamas <pedrolamas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PedroLamas/gatsby-remark-acronyms/issues"
+  },
+  "homepage": "https://github.com/PedroLamas/gatsby-remark-acronyms#readme",
+  "dependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "unist-util-visit": "^1.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
