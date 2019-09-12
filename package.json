@@ -1,12 +1,14 @@
 {
   "name": "gatsby-remark-acronyms",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Gatsby Remark plugin to show tootips for acronyms found in text",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
     "format": "eslint --fix src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir . --ignore __tests__",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "cross-env NODE_ENV=production yarn build"
   },
   "repository": {
     "type": "git",
@@ -20,13 +22,27 @@
   },
   "homepage": "https://github.com/PedroLamas/gatsby-remark-acronyms#readme",
   "dependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
     "unist-util-visit": "^1.4.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "babel-preset-gatsby-package": "^0.2.4",
+    "cross-env": "^5.2.1",
     "eslint": "^6.3.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
   }
 }

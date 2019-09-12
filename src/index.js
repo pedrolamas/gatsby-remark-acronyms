@@ -1,7 +1,9 @@
-import visit from 'unist-util-visit';
+const visit = require('unist-util-visit');
 
-export default ({ markdownAST }, pluginOptions) => {
+module.exports = ({ markdownAST }, pluginOptions = {}) => {
   const { acronyms } = pluginOptions;
+
+  if (!acronyms) return;
 
   const acronymsRegExp = new RegExp(
     `\\b(${Object.keys(acronyms).join('|')})\\b`,
@@ -31,6 +33,4 @@ export default ({ markdownAST }, pluginOptions) => {
 
     return index + 1;
   });
-
-  return markdownAST;
 };
