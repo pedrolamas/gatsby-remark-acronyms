@@ -1,7 +1,7 @@
 {
   "name": "gatsby-remark-acronyms",
-  "version": "1.0.1",
-  "description": "Gatsby Remark plugin to show description tootips for acronyms found in text",
+  "version": "1.0.2",
+  "description": "Gatsby Remark plugin to show description tooltips for acronyms found in markdown text",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
