@@ -14,7 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/PedroLamas/gatsby-remark-acronyms.git"
   },
-  "keywords": [],
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "remark",
+    "markdown",
+    "acronym"
+  ],
   "author": "Pedro Lamas <pedrolamas@gmail.com>",
   "license": "MIT",
   "bugs": {
