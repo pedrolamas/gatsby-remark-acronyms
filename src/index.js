@@ -3,7 +3,7 @@ const visit = require('unist-util-visit');
 module.exports = ({ markdownAST }, pluginOptions = {}) => {
   const { acronyms } = pluginOptions;
 
-  if (!acronyms) return;
+  if (!acronyms) return markdownAST;
 
   const acronymsRegExp = new RegExp(
     `\\b(${Object.keys(acronyms).join('|')})\\b`,
@@ -33,4 +33,6 @@ module.exports = ({ markdownAST }, pluginOptions = {}) => {
 
     return index + 1;
   });
+
+  return markdownAST;
 };

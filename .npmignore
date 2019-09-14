@@ -2,3 +2,7 @@ node_modules
 src
 yarn.lock
 *.log
+.editorconfig
+.babelrc
+.eslintrc.js
+.gitattributes
