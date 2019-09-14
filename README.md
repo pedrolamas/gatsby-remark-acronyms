@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/gatsby-remark-acronyms)](https://www.npmjs.com/package/gatsby-remark-acronyms)
 
-Gatsby Remark plugin to show description tootips for acronyms found in text.
+Gatsby Remark plugin to show description tooltips for acronyms found in text.
 
 ## Installation
 
