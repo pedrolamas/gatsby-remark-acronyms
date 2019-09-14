@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-acronyms",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Gatsby Remark plugin to show description tooltips for acronyms found in markdown text",
   "main": "index.js",
   "scripts": {
