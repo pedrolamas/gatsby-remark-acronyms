@@ -31,14 +31,14 @@ plugins: [
           options: {
             acronyms: {
               CSS: `Cascading Style Sheets`,
-              HTML: `Hypertext Markup Language`
-            }
+              HTML: `Hypertext Markup Language`,
+            },
           },
         },
       ],
     },
   },
-]
+];
 ```
 
 ## Options
@@ -67,19 +67,20 @@ If you are using the plugin with [MDX](https://mdxjs.com/), you can use [MDXProv
 
 ```jsx
 // src/App.js
-import React from 'react'
-import { MDXProvider } from '@mdx-js/react'
+import React from 'react';
+import { MDXProvider } from '@mdx-js/react';
 
-const Acronym = props => <acronym style={{ color: 'green' }} {...props} />
+const Acronym = props => <acronym style={{ color: 'green' }} {...props} />;
 
 const components = {
-  acronym: Acronym
-}
+  acronym: Acronym,
+};
 
-export default props =>
+export default props => (
   <MDXProvider components={components}>
     <main {...props} />
   </MDXProvider>
+);
 ```
 
 ## License

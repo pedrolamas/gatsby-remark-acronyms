@@ -1,12 +1,20 @@
 module.exports = {
-    "extends": "airbnb-base",
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true,
-        "jest": true
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:jest/recommended', 'prettier/@typescript-eslint', 'plugin:prettier/recommended'],
+  plugins: ['react', '@typescript-eslint', 'jest', 'prettier'],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect',
     },
-    "plugins": ["jest"],
-    "rules": {
-    }
+  },
+  parser: '@typescript-eslint/parser',
 };

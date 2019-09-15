@@ -1,7 +1,7 @@
-const Remark = require('remark');
-const visit = require('unist-util-visit');
+import Remark from 'remark';
+import visit from 'unist-util-visit';
 
-const plugin = require('..');
+import plugin from '..';
 
 const pluginSettings = {
   acronyms: {
@@ -10,7 +10,7 @@ const pluginSettings = {
   },
 };
 
-const remark = new Remark().data('settings', {
+const remark = Remark().data('settings', {
   commonmark: true,
   footnotes: true,
   pedantic: true,
@@ -22,7 +22,7 @@ describe('gatsby-remark-acronyms', () => {
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
-    visit(transformed, 'acronym', (node) => {
+    visit(transformed, 'acronym', node => {
       expect(node.title).toBe(pluginSettings.acronyms.HTML);
     });
 

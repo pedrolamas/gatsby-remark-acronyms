@@ -2,13 +2,20 @@
   "name": "gatsby-remark-acronyms",
   "version": "1.0.5",
   "description": "Gatsby Remark plugin to show description tooltips for acronyms found in markdown text",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "lint": "eslint src",
-    "format": "eslint --fix src",
-    "build": "babel src --out-dir . --ignore **/__tests__",
-    "test": "jest",
-    "prepublishOnly": "cross-env NODE_ENV=production yarn build"
+    "build": "tsc",
+    "prepublishOnly": "yarn lint && yarn test && yarn build",
+    "test": "jest --passWithNoTests",
+    "lint": "yarn run lint:code && yarn run lint:other",
+    "lint:code": "yarn run eslint:defaults",
+    "lint:other": "yarn run prettier:defaults --check",
+    "format": "yarn run format:code && yarn run format:other",
+    "format:code": "yarn run eslint:defaults --fix",
+    "format:other": "yarn run prettier:defaults --write",
+    "eslint:defaults": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "prettier:defaults": "prettier \"**/*.{json,md,markdown,css,scss,yaml,yml}\""
   },
   "repository": {
     "type": "git",
@@ -31,26 +38,41 @@
     "unist-util-visit": "^1.4.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "cross-env": "^5.2.1",
-    "eslint": "^6.3.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "@types/jest": "^24.0.18",
+    "@types/mocha": "^5.2.7",
+    "@types/unist": "^2.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-react": "^1.1.7",
     "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
     "husky": "^3.0.5",
     "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
-    "remark": "^11.0.1"
+    "prettier": "^1.18.2",
+    "remark": "^11.0.1",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
   },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.js": [
+    "*.{json,md,markdown,css,scss,yaml,yml}": [
+      "prettier --check"
+    ],
+    "*.{ts,tsx,js,jsx}": [
       "eslint"
     ]
   }
