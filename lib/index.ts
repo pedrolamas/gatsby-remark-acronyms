@@ -11,7 +11,7 @@ type PluginOptions = {
   };
 };
 
-export default ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {} as PluginOptions): Node => {
+const Plugin = ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {} as PluginOptions): Node => {
   const { acronyms } = pluginOptions;
 
   if (!acronyms) return markdownAST;
@@ -44,3 +44,5 @@ export default ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {
 
   return markdownAST;
 };
+
+export = Plugin;
