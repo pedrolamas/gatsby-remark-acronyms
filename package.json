@@ -62,18 +62,5 @@
   },
   "files": [
     "dist/**/*"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{json,md,markdown,css,scss,yaml,yml}": [
-      "prettier --check"
-    ],
-    "*.{ts,tsx,js,jsx}": [
-      "eslint"
-    ]
-  }
+  ]
 }
