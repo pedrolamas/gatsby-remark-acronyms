@@ -7,13 +7,13 @@ Gatsby Remark plugin to show description tooltips for acronyms found in text.
 ## Installation
 
 ```sh
-npm install --save gatsby-node-helpers
+npm install --save gatsby-remark-acronyms
 ```
 
 or
 
 ```sh
-yarn add gatsby-node-helpers
+yarn add gatsby-remark-acronyms
 ```
 
 ## How to use
@@ -21,7 +21,6 @@ yarn add gatsby-node-helpers
 ```js
 // In your gatsby-config.js
 plugins: [
-  `gatsby-plugin-sharp`,
   {
     resolve: `gatsby-transformer-remark`,
     options: {
