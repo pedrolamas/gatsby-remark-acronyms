@@ -22,9 +22,15 @@ describe('gatsby-remark-acronyms', () => {
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
-    visit(transformed, 'acronym', node => {
-      expect(node.title).toBe(pluginSettings.acronyms.HTML);
+    let count = 0;
+
+    visit(transformed, 'html', node => {
+      if (node.value === '<abbr title="Hypertext Markup Language">HTML</abbr>') {
+        count++;
+      }
     });
+
+    expect(count).toEqual(1);
 
     expect(transformed).toMatchSnapshot();
   });
@@ -34,13 +40,13 @@ describe('gatsby-remark-acronyms', () => {
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
-    let found = false;
+    let count = 0;
 
-    visit(transformed, 'acronym', () => {
-      found = true;
+    visit(transformed, 'html', () => {
+      count++;
     });
 
-    expect(found).toBeFalsy();
+    expect(count).toEqual(0);
 
     expect(transformed).toMatchSnapshot();
   });
@@ -50,13 +56,13 @@ describe('gatsby-remark-acronyms', () => {
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
-    let found = false;
+    let count = 0;
 
-    visit(transformed, 'acronym', () => {
-      found = true;
+    visit(transformed, 'html', () => {
+      count++;
     });
 
-    expect(found).toBeFalsy();
+    expect(count).toEqual(0);
 
     expect(transformed).toMatchSnapshot();
   });
@@ -66,13 +72,13 @@ describe('gatsby-remark-acronyms', () => {
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
-    let found = false;
+    let count = 0;
 
-    visit(transformed, 'acronym', () => {
-      found = true;
+    visit(transformed, 'html', () => {
+      count++;
     });
 
-    expect(found).toBeFalsy();
+    expect(count).toEqual(0);
 
     expect(transformed).toMatchSnapshot();
   });
