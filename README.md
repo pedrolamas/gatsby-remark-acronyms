@@ -55,24 +55,24 @@ My site uses HTML and CSS!
 Given the configuration presented above and this small markdown snippet, the rendered HTML output would be:
 
 ```html
-<p>My site uses <acronym title="Hypertext Markup Language">HTML</acronym> and <acronym title="Cascading Style Sheets">CSS</acronym>!</p>
+<p>My site uses <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>!</p>
 ```
 
 ## Styling
 
-Just globally style the `acronym` element as you would any other element through a style sheet.
+Just globally style the `abbr` element as you would any other element through a style sheet.
 
-If you are using the plugin with [MDX](https://mdxjs.com/), you can use [MDXProvider](https://mdxjs.com/getting-started#mdxprovider) to completely control how the `acronym` element should be rendered:
+If you are using the plugin with [MDX](https://mdxjs.com/), you can use [MDXProvider](https://mdxjs.com/getting-started#mdxprovider) to completely control how the `abbr` element should be rendered:
 
 ```jsx
 // src/App.js
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
-const Acronym = props => <acronym style={{ color: 'green' }} {...props} />;
+const Acronym = props => <abbr style={{ color: 'green' }} {...props} />;
 
 const components = {
-  acronym: Acronym,
+  abbr: Acronym,
 };
 
 export default props => (
