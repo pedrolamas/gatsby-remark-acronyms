@@ -137,7 +137,7 @@ Object {
         },
         Object {
           "type": "html",
-          "value": "<acronym title=\\"Hypertext Markup Language\\">HTML</acronym>",
+          "value": "<abbr title=\\"Hypertext Markup Language\\">HTML</abbr>",
         },
         Object {
           "type": "text",

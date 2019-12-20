@@ -26,7 +26,7 @@ const Plugin = ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {
         return acronymTitle
           ? {
               type: 'html',
-              value: `<acronym title="${acronymTitle}">${value}</acronym>`,
+              value: `<abbr title="${acronymTitle}">${value}</abbr>`,
             }
           : {
               type: 'text',
