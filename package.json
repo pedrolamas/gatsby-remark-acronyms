@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/PedroLamas/gatsby-remark-acronyms#readme",
   "dependencies": {
-    "unist-util-visit": "^1.4.1"
+    "unist-util-visit": "^2.0.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
