@@ -43,7 +43,7 @@
     "@types/node": "^13.7.1",
     "@types/unist": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
+    "@typescript-eslint/parser": "^3.7.1",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-config-react": "^1.1.7",
