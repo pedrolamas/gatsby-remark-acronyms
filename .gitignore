@@ -89,3 +89,4 @@ typings/
 
 # Other
 dist/
+.idea

@@ -6,13 +6,14 @@ type GatsbyRemarkPluginParameters = {
 };
 
 type PluginOptions = {
+  dataAttribute?: boolean;
   acronyms: {
     [key: string]: string;
   };
 };
 
 const Plugin = ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {} as PluginOptions): Node => {
-  const { acronyms } = pluginOptions;
+  const { acronyms, dataAttribute } = pluginOptions;
 
   if (!acronyms) return markdownAST;
 
@@ -23,15 +24,19 @@ const Plugin = ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {
       const newNodes = node.value.split(acronymsRegExp).map(value => {
         const acronymTitle = acronyms[value];
 
-        return acronymTitle
-          ? {
-              type: 'html',
-              value: `<abbr title="${acronymTitle}">${value}</abbr>`,
-            }
-          : {
-              type: 'text',
-              value,
-            };
+        if (acronymTitle) {
+          const valueHTML = dataAttribute ? `<abbr data-title="${acronymTitle}">${value}</abbr>` : `<abbr title="${acronymTitle}">${value}</abbr>`;
+
+          return {
+            type: 'html',
+            value: valueHTML,
+          };
+        }
+
+        return {
+          type: 'text',
+          value,
+        };
       });
 
       parent.children.splice(index, 1, ...newNodes);

@@ -175,3 +175,53 @@ Object {
   "type": "root",
 }
 `;
+
+exports[`gatsby-remark-acronyms should render acronym inside data-attribute if it parameter was set in options 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "children": Array [
+        Object {
+          "type": "text",
+          "value": "I like ",
+        },
+        Object {
+          "type": "html",
+          "value": "<abbr data-title=\\"Hypertext Markup Language\\">HTML</abbr>",
+        },
+        Object {
+          "type": "text",
+          "value": "!",
+        },
+      ],
+      "position": Position {
+        "end": Object {
+          "column": 13,
+          "line": 1,
+          "offset": 12,
+        },
+        "indent": Array [],
+        "start": Object {
+          "column": 1,
+          "line": 1,
+          "offset": 0,
+        },
+      },
+      "type": "paragraph",
+    },
+  ],
+  "position": Object {
+    "end": Object {
+      "column": 13,
+      "line": 1,
+      "offset": 12,
+    },
+    "start": Object {
+      "column": 1,
+      "line": 1,
+      "offset": 0,
+    },
+  },
+  "type": "root",
+}
+`;

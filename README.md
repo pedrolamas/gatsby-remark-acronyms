@@ -42,9 +42,10 @@ plugins: [
 
 ## Options
 
-| Name       | Default | Description                                                     |
-| ---------- | ------- | --------------------------------------------------------------- |
-| `acronyms` |         | Object containing keys for acronyms and values for descriptions |
+| Name            | Default | Description                                                     |
+| --------------- | ------- | --------------------------------------------------------------- |
+| `acronyms`      |         | Object containing keys for acronyms and values for descriptions |
+| `dataAttribute` | false   | Set acronyms description inside `data-title` attribute          |
 
 ## Usage in Markdown
 
@@ -56,6 +57,12 @@ Given the configuration presented above and this small markdown snippet, the ren
 
 ```html
 <p>My site uses <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>!</p>
+```
+
+If `dataAttribute = true`
+
+```html
+<p>My site uses <abbr data-title="Hypertext Markup Language">HTML</abbr> and <abbr data-title="Cascading Style Sheets">CSS</abbr>!</p>
 ```
 
 ## Styling
@@ -80,6 +87,37 @@ export default props => (
     <main {...props} />
   </MDXProvider>
 );
+```
+
+For styling with property `dataAttribute = true` you can use next styles:
+
+```css
+[data-title] {
+  position: relative;
+}
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  background-color: #030e2f;
+  color: lightgrey;
+  font-size: 0.75em;
+  position: absolute;
+  padding: 2px 5px;
+  top: -125%;
+  left: -50%;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222;
+  opacity: 0;
+  border: 1px solid #111;
+  z-index: 99999;
+  visibility: hidden;
+}
 ```
 
 ## License

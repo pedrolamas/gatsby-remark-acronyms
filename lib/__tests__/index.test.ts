@@ -35,6 +35,27 @@ describe('gatsby-remark-acronyms', () => {
     expect(transformed).toMatchSnapshot();
   });
 
+  it('should render acronym inside data-attribute if it parameter was set in options', () => {
+    const markdownAST = remark.parse('I like HTML!');
+    const settings = {
+      ...pluginSettings,
+      dataAttribute: true,
+    };
+    const transformed = plugin({ markdownAST }, settings);
+
+    let count = 0;
+
+    visit(transformed, 'html', node => {
+      if (node.value === '<abbr data-title="Hypertext Markup Language">HTML</abbr>') {
+        count++;
+      }
+    });
+
+    expect(count).toEqual(1);
+
+    expect(transformed).toMatchSnapshot();
+  });
+
   it('acronyms are case sensitive', () => {
     const markdownAST = remark.parse('I like Html!');
 
