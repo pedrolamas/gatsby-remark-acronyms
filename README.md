@@ -69,13 +69,13 @@ If you are using the plugin with [MDX](https://mdxjs.com/), you can use [MDXProv
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
-const Acronym = props => <abbr style={{ color: 'green' }} {...props} />;
+const Acronym = (props) => <abbr style={{ color: 'green' }} {...props} />;
 
 const components = {
   abbr: Acronym,
 };
 
-export default props => (
+export default (props) => (
   <MDXProvider components={components}>
     <main {...props} />
   </MDXProvider>
