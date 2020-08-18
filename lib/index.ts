@@ -20,7 +20,7 @@ const Plugin = ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {
 
   visit(markdownAST, 'text', (node, index, parent) => {
     if (node.value && typeof node.value === 'string') {
-      const newNodes = node.value.split(acronymsRegExp).map(value => {
+      const newNodes = node.value.split(acronymsRegExp).map((value) => {
         const acronymTitle = acronyms[value];
 
         return acronymTitle

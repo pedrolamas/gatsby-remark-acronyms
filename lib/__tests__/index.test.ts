@@ -24,7 +24,7 @@ describe('gatsby-remark-acronyms', () => {
 
     let count = 0;
 
-    visit(transformed, 'html', node => {
+    visit(transformed, 'html', (node) => {
       if (node.value === '<abbr title="Hypertext Markup Language">HTML</abbr>') {
         count++;
       }
