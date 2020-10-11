@@ -1,4 +1,4 @@
-name: Install, build and test package
+name: CI
 
 on:
   push:
