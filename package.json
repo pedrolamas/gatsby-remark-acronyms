@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PedroLamas/gatsby-remark-acronyms.git"
+    "url": "git+https://github.com/pedrolamas/gatsby-remark-acronyms.git"
   },
   "keywords": [
     "gatsby",
@@ -31,9 +31,9 @@
   "author": "Pedro Lamas <pedrolamas@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PedroLamas/gatsby-remark-acronyms/issues"
+    "url": "https://github.com/pedrolamas/gatsby-remark-acronyms/issues"
   },
-  "homepage": "https://github.com/PedroLamas/gatsby-remark-acronyms#readme",
+  "homepage": "https://github.com/pedrolamas/gatsby-remark-acronyms#readme",
   "dependencies": {
     "unist-util-visit": "^2.0.3"
   },

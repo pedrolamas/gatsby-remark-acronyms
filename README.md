@@ -1,9 +1,9 @@
 # gatsby-remark-acronyms
 
 ![Project Maintenance](https://img.shields.io/maintenance/yes/2020.svg)
-[![License](https://img.shields.io/github/license/PedroLamas/gatsby-remark-acronyms.svg)](https://github.com/PedroLamas/gatsby-remark-acronyms/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/pedrolamas/gatsby-remark-acronyms.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms/blob/master/LICENSE)
 
-![CI](https://github.com/PedroLamas/gatsby-remark-acronyms/workflows/CI/badge.svg)
+![CI](https://github.com/pedrolamas/gatsby-remark-acronyms/workflows/CI/badge.svg)
 [![npm version](https://img.shields.io/npm/v/gatsby-remark-acronyms)](https://www.npmjs.com/package/gatsby-remark-acronyms)
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/pedrolamas?style=social)](https://twitter.com/pedrolamas)
