@@ -1,12 +1,12 @@
 # gatsby-remark-acronyms
 
-![Project Maintenance](https://img.shields.io/maintenance/yes/2020.svg)
-[![License](https://img.shields.io/github/license/pedrolamas/gatsby-remark-acronyms.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms/blob/master/LICENSE)
+[![Project Maintenance](https://img.shields.io/maintenance/yes/2020.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms 'GitHub Repository')
+[![License](https://img.shields.io/github/license/pedrolamas/gatsby-remark-acronyms.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms/blob/master/LICENSE 'License')
 
-![CI](https://github.com/pedrolamas/gatsby-remark-acronyms/workflows/CI/badge.svg)
-[![npm version](https://img.shields.io/npm/v/gatsby-remark-acronyms)](https://www.npmjs.com/package/gatsby-remark-acronyms)
+[![CI](https://github.com/pedrolamas/gatsby-remark-acronyms/workflows/CI/badge.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms/actions 'Build Status')
+[![npm version](https://img.shields.io/npm/v/gatsby-remark-acronyms)](https://www.npmjs.com/package/gatsby-remark-acronyms 'NPM package')
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/pedrolamas?style=social)](https://twitter.com/pedrolamas)
+[![Twitter Follow](https://img.shields.io/twitter/follow/pedrolamas?style=social)](https://twitter.com/pedrolamas '@pedrolamas')
 
 Gatsby Remark plugin to show description tooltips for acronyms found in text.
 
