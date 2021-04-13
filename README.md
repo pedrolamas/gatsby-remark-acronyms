@@ -1,6 +1,6 @@
 # gatsby-remark-acronyms
 
-[![Project Maintenance](https://img.shields.io/maintenance/yes/2020.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms 'GitHub Repository')
+[![Project Maintenance](https://img.shields.io/maintenance/yes/2021.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms 'GitHub Repository')
 [![License](https://img.shields.io/github/license/pedrolamas/gatsby-remark-acronyms.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms/blob/master/LICENSE 'License')
 
 [![CI](https://github.com/pedrolamas/gatsby-remark-acronyms/workflows/CI/badge.svg)](https://github.com/pedrolamas/gatsby-remark-acronyms/actions 'Build Status')
