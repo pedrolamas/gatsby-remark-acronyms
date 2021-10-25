@@ -1,5 +1,6 @@
 import Remark from 'remark';
 import visit from 'unist-util-visit';
+import { Root, HTML } from 'mdast';
 
 import plugin from '..';
 
@@ -18,13 +19,13 @@ const remark = Remark().data('settings', {
 
 describe('gatsby-remark-acronyms', () => {
   it('renders acronym when one is found on markdown text', () => {
-    const markdownAST = remark.parse('I like HTML!');
+    const markdownAST = remark.parse('I like HTML!') as Root;
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
     let count = 0;
 
-    visit(transformed, 'html', (node) => {
+    visit<HTML>(transformed, 'html', (node) => {
       if (node.value === '<abbr title="Hypertext Markup Language">HTML</abbr>') {
         count++;
       }
@@ -36,7 +37,7 @@ describe('gatsby-remark-acronyms', () => {
   });
 
   it('acronyms are case sensitive', () => {
-    const markdownAST = remark.parse('I like Html!');
+    const markdownAST = remark.parse('I like Html!') as Root;
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
@@ -52,7 +53,7 @@ describe('gatsby-remark-acronyms', () => {
   });
 
   it('acronyms are full words', () => {
-    const markdownAST = remark.parse('I like XHTML!');
+    const markdownAST = remark.parse('I like XHTML!') as Root;
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 
@@ -68,7 +69,7 @@ describe('gatsby-remark-acronyms', () => {
   });
 
   it('does not change render if no acronym is found in markdown text', () => {
-    const markdownAST = remark.parse('No acronyms on this text!');
+    const markdownAST = remark.parse('No acronyms on this text!') as Root;
 
     const transformed = plugin({ markdownAST }, pluginSettings);
 

@@ -1,8 +1,9 @@
 import visit from 'unist-util-visit';
 import { Node } from 'unist';
+import { Root, HTML, Text } from 'mdast';
 
 type GatsbyRemarkPluginParameters = {
-  markdownAST: Node;
+  markdownAST: Root;
 };
 
 type PluginOptions = {
@@ -18,20 +19,20 @@ const Plugin = ({ markdownAST }: GatsbyRemarkPluginParameters, pluginOptions = {
 
   const acronymsRegExp = new RegExp(`\\b(${Object.keys(acronyms).join('|')})\\b`, 'g');
 
-  visit(markdownAST, 'text', (node, index, parent) => {
-    if (node.value && typeof node.value === 'string') {
+  visit<Text>(markdownAST, 'text', (node, index, parent) => {
+    if (node.value && parent) {
       const newNodes = node.value.split(acronymsRegExp).map((value) => {
         const acronymTitle = acronyms[value];
 
         return acronymTitle
-          ? {
+          ? ({
               type: 'html',
               value: `<abbr title="${acronymTitle}">${value}</abbr>`,
-            }
-          : {
+            } as HTML)
+          : ({
               type: 'text',
               value,
-            };
+            } as Text);
       });
 
       parent.children.splice(index, 1, ...newNodes);
