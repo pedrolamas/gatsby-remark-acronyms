@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`gatsby-remark-acronyms acronyms are case sensitive 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
+{
+  "children": [
+    {
+      "children": [
+        {
           "type": "text",
           "value": "I like Html!",
         },
       ],
-      "position": Object {
-        "end": Object {
+      "position": {
+        "end": {
           "column": 13,
           "line": 1,
           "offset": 12,
         },
-        "start": Object {
+        "start": {
           "column": 1,
           "line": 1,
           "offset": 0,
@@ -25,13 +25,13 @@ Object {
       "type": "paragraph",
     },
   ],
-  "position": Object {
-    "end": Object {
+  "position": {
+    "end": {
       "column": 13,
       "line": 1,
       "offset": 12,
     },
-    "start": Object {
+    "start": {
       "column": 1,
       "line": 1,
       "offset": 0,
@@ -42,22 +42,22 @@ Object {
 `;
 
 exports[`gatsby-remark-acronyms acronyms are full words 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
+{
+  "children": [
+    {
+      "children": [
+        {
           "type": "text",
           "value": "I like XHTML!",
         },
       ],
-      "position": Object {
-        "end": Object {
+      "position": {
+        "end": {
           "column": 14,
           "line": 1,
           "offset": 13,
         },
-        "start": Object {
+        "start": {
           "column": 1,
           "line": 1,
           "offset": 0,
@@ -66,13 +66,13 @@ Object {
       "type": "paragraph",
     },
   ],
-  "position": Object {
-    "end": Object {
+  "position": {
+    "end": {
       "column": 14,
       "line": 1,
       "offset": 13,
     },
-    "start": Object {
+    "start": {
       "column": 1,
       "line": 1,
       "offset": 0,
@@ -83,22 +83,22 @@ Object {
 `;
 
 exports[`gatsby-remark-acronyms does not change render if no acronym is found in markdown text 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
+{
+  "children": [
+    {
+      "children": [
+        {
           "type": "text",
           "value": "No acronyms on this text!",
         },
       ],
-      "position": Object {
-        "end": Object {
+      "position": {
+        "end": {
           "column": 26,
           "line": 1,
           "offset": 25,
         },
-        "start": Object {
+        "start": {
           "column": 1,
           "line": 1,
           "offset": 0,
@@ -107,13 +107,13 @@ Object {
       "type": "paragraph",
     },
   ],
-  "position": Object {
-    "end": Object {
+  "position": {
+    "end": {
       "column": 26,
       "line": 1,
       "offset": 25,
     },
-    "start": Object {
+    "start": {
       "column": 1,
       "line": 1,
       "offset": 0,
@@ -124,30 +124,30 @@ Object {
 `;
 
 exports[`gatsby-remark-acronyms renders acronym when one is found on markdown text 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
-        Object {
+{
+  "children": [
+    {
+      "children": [
+        {
           "type": "text",
           "value": "I like ",
         },
-        Object {
+        {
           "type": "html",
-          "value": "<abbr title=\\"Hypertext Markup Language\\">HTML</abbr>",
+          "value": "<abbr title="Hypertext Markup Language">HTML</abbr>",
         },
-        Object {
+        {
           "type": "text",
           "value": "!",
         },
       ],
-      "position": Object {
-        "end": Object {
+      "position": {
+        "end": {
           "column": 13,
           "line": 1,
           "offset": 12,
         },
-        "start": Object {
+        "start": {
           "column": 1,
           "line": 1,
           "offset": 0,
@@ -156,13 +156,13 @@ Object {
       "type": "paragraph",
     },
   ],
-  "position": Object {
-    "end": Object {
+  "position": {
+    "end": {
       "column": 13,
       "line": 1,
       "offset": 12,
     },
-    "start": Object {
+    "start": {
       "column": 1,
       "line": 1,
       "offset": 0,

@@ -1,6 +1,6 @@
 import visit from 'unist-util-visit';
-import { Node } from 'unist';
-import { Root, HTML, Text } from 'mdast';
+import type { Node } from 'unist';
+import type { Root, HTML, Text } from 'mdast';
 
 type GatsbyRemarkPluginParameters = {
   markdownAST: Root;
